@@ -15,7 +15,7 @@
 
 SpecBegin(FISBlackjackGame)
 
-__block FISBlackjackGame *game;
+__block FISBlackJackGame *game;
 
 describe(@"FISBlackjackGame", ^{
     
@@ -24,12 +24,12 @@ describe(@"FISBlackjackGame", ^{
     });
     
     beforeEach(^{
-        game = [[FISBlackjackGame alloc] init];
+        game = [[FISBlackJackGame alloc] init];
     });
     
     describe(@"init", ^{
         it(@"should initialize a game with a deck handscore and hand", ^{
-            expect(game).to.beKindOf([FISBlackjackGame class]);
+            expect(game).to.beKindOf([FISBlackJackGame class]);
             
             expect(game.playingCardDeck).toNot.beNil();
             expect([game.playingCardDeck.cards count]).to.equal(52);
